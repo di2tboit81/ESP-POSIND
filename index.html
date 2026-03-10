@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0F172A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title> WIN KCU BATAM 29400</title>
+
+<style>
+:root{
+    --navy-dark:#0B1120;
+    --navy:#0F172A;
+    --orange:#FF6A00;
+    --orange-soft:#FF8C42;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;   /* kunci kanan kiri */
+    overflow-y: auto;     /* izinkan tarik refresh */
+    -webkit-overflow-scrolling: touch; /* smooth di iPhone */
+}
+
+body{
+    background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+	min-height:100vh;
+    overscroll-behavior-y: auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    position:relative;
+}
+
+/* Background Cyber Glow */
+body::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background: radial-gradient(circle, rgba(255,106,0,0.3), transparent 70%);
+    top:-150px;
+    right:-150px;
+    animation: glowMove 6s infinite alternate ease-in-out;
+    z-index:1;
+}
+
+@keyframes glowMove{
+    from{ transform: translateY(0px); }
+    to{ transform: translateY(50px); }
+}
+
+.container{
+    text-align:center;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-bottom:50px; /* jarak bawah container */
+}
+
+h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size:52px;
+    font-weight:900;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    margin-bottom:55px;
+    display:inline-block;
+    color:#fff;
+    position:relative;
+    animation: flicker 2s infinite alternate;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 15px #FF6A00,
+        0 0 30px #FF6A00,
+        0 0 60px #FF6A00,
+        0 0 90px #FF6A00;
+}
+
+@keyframes flicker{
+    0% { opacity:1; }
+    45% { opacity:0.85; }
+    50% { opacity:1; }
+    55% { opacity:0.9; }
+    100% { opacity:1; }
+}
+
+.logo-grid{
+    display:flex;
+    gap:50px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.logo-btn{
+    width:160px;
+    height:160px;
+    border-radius:20px;
+    background: linear-gradient(145deg, #111827, #1E293B);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:0.3s ease-in-out;
+    box-shadow:
+        0 0 15px rgba(255,106,0,0.4),
+        inset 0 0 15px rgba(255,106,0,0.2);
+    position:relative;
+}
+
+.logo-btn:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow:
+        0 0 25px var(--orange),
+        0 0 60px rgba(255,106,0,0.6);
+}
+
+.logo-btn img{
+    max-width:90px;
+    max-height:90px;
+    filter: drop-shadow(0 0 8px var(--orange-soft));
+}
+
+.logo-title{
+    position:absolute;
+    bottom:12px;
+    left:0;
+    right:0;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#ffffff;
+    text-transform:uppercase;
+    opacity:0.85;
+    transition:0.3s;
+}
+
+.logo-btn:hover .logo-title{
+    color:var(--orange-soft);
+    opacity:1;
+    letter-spacing:2px;
+}
+
+.main-logo{
+    width:220px;
+    margin-bottom:35px;
+    filter: drop-shadow(0 0 25px var(--orange));
+    animation: floatLogo 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatLogo{
+    from{ transform: translateY(0px); }
+    to{ transform: translateY(12px); }
+}
+
+/* Logo Item */
+.logo-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.logo-name{
+    font-family: 'Oxanium', sans-serif;
+    margin-top:18px;
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#ffffff;
+    transition:0.3s;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #FF6A00,
+        0 0 20px #FF6A00;
+}
+
+.logo-item:hover .logo-name{
+    color:#FF8C42;
+    letter-spacing:5px;
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #FF6A00,
+        0 0 40px #FF6A00,
+        0 0 60px #FF6A00;
+}
+
+/* CYBER LIGHT MOVING BACKGROUND */
+body::after{
+    content:"";
+    position:absolute;
+    width:200%;
+    height:200%;
+    background: repeating-linear-gradient(
+        120deg,
+        rgba(255,106,0,0.05) 0px,
+        rgba(255,106,0,0.05) 2px,
+        transparent 2px,
+        transparent 80px
+    );
+    animation: moveLines 20s linear infinite;
+    pointer-events:none;
+    z-index:0;
+}
+
+@keyframes moveLines{
+    from{
+        transform: translateX(0) translateY(0);
+    }
+    to{
+        transform: translateX(-200px) translateY(-200px);
+    }
+}
+
+/* ===== TOMBOL KELUAR DI BAWAH LOGO TERAKHIR ===== */
+.exit-btn{
+    position: relative; /* sebelumnya fixed */
+    margin-top:30px;
+    padding:14px 40px;
+    font-size:16px;
+    font-weight:800;
+    letter-spacing:2px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:linear-gradient(90deg, #FF6A00, #FF8C42);
+    color:#fff;
+    box-shadow:0 0 20px rgba(255,106,0,0.6);
+    transition:0.3s;
+    z-index:2;
+}
+.exit-btn:hover{
+    transform: scale(1.08);
+    box-shadow:0 0 35px #FF6A00;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .container{
+        width:100%;
+        padding-bottom:50px;
+    }
+    .main-logo{
+        width:120px;
+        margin-bottom:25px;
+    }
+    h1{
+        font-size:26px;
+        letter-spacing:3px;
+        margin-top:15px; /* tambah ini untuk turunkan di HP */
+        margin-bottom:30px;
+        text-align:center;
+    }
+    .logo-grid{
+        flex-direction:column;
+        gap:25px;
+        width:100%;
+    }
+    .logo-btn{
+    width:140px;
+    height:140px;
+    }
+	
+    .logo-btn img{
+        max-width:70px;
+        max-height:70px;
+    }
+    .logo-name{
+        font-size:14px;
+        letter-spacing:2px;
+        text-align:center;
+    }
+}
+
+/* ===== FOOTER CYBER ===== */
+.footer{
+    margin-top:40px;
+    text-align:center;
+    width:100%;
+}
+
+.footer-line{
+    width:200px;
+    height:2px;
+    margin:0 auto 12px auto;
+    background:linear-gradient(90deg, transparent, #FF6A00, transparent);
+    box-shadow:0 0 15px #FF6A00;
+}
+
+.footer-text{
+    font-size:12px;
+    letter-spacing:2px;
+    color:#cbd5e1;
+    opacity:0.9;
+    line-height:1.8;
+}
+
+.creator{
+    color:#FF8C42;
+    font-weight:700;
+    text-shadow:
+        0 0 5px #FF8C42,
+        0 0 10px #FF6A00,
+        0 0 20px #FF6A00;
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Oxanium:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+    <img src="Logo PosIND.png" class="main-logo" alt="Logo Utama">
+    <h1>WIN 29400</h1>
+    <div class="logo-grid">
+        <!-- LOGO 1 -->
+        <div class="logo-item">
+            <div class="logo-btn" onclick="window.location.href='https://di2tboit81.github.io/POSIND-SPX-INBOUND/'">
+                <img src="SPX-INBOUND.png" alt="Logo 1">
+            </div>
+            <div class="logo-name">INBOUND ESP - POSIND</div>
+        </div>
+
+        <!-- LOGO 3 -->
+        <div class="logo-item">
+            <div class="logo-btn" onclick="window.location.href='https://di2tboit81.github.io/POSIND-SPX-CHECK-BAG/'">
+                <img src="CHEK BAG.png" alt="Logo 3">
+            </div>
+            <div class="logo-name">CHECK BAG SYSTEM</div>
+        </div>
+
+           <!-- LOGO 2 -->
+        <div class="logo-item">
+            <div class="logo-btn" onclick="window.location.href='https://di2tboit81.github.io/POSIND-SPX-OUTBOUND/'">
+                <img src="SPX-OUTBOUND.png" alt="Logo 2">
+            </div>
+            <div class="logo-name">OUTBOUND POSIND - ESP</div>
+        </div>
+ </div>    
+      
+    <!-- TOMBOL KELUAR -->
+        <!-- TOMBOL KELUAR -->
+    <button class="exit-btn" onclick="keluarApp()">KELUAR</button>
+	
+	<div class="footer">
+    <div class="footer-line"></div>
+    <div class="footer-text">
+        © <span id="tahun"></span> WIN KCU BATAM 29400  
+        <br>
+        Powered by <span class="creator">Team Win 29400</span>
+    </div>
+</div>
+</div>
+
+<script>
+function keluarApp(){
+    if(confirm("Yakin ingin keluar aplikasi?")){
+        
+        // Untuk WebView Android
+        if (window.Android && Android.exitApp) {
+            Android.exitApp();
+        }
+
+        // Cordova / Phonegap
+        else if (navigator.app) {
+            navigator.app.exitApp();
+        }
+
+        // Alternatif lain
+        else if (navigator.device) {
+            navigator.device.exitApp();
+        }
+
+        // Fallback
+        else {
+            window.open('', '_self');
+            window.close();
+        }
+    }
+}
+
+/* ===== Pull To Refresh ===== */
+let startY = 0;
+
+document.addEventListener("touchstart", function(e){
+    startY = e.touches[0].clientY;
+});
+
+document.addEventListener("touchend", function(e){
+    let endY = e.changedTouches[0].clientY;
+
+    if(endY - startY > 120){
+        location.reload();
+    }
+});
+document.getElementById("tahun").innerHTML = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
