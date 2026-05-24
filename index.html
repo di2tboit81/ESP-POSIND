@@ -614,7 +614,7 @@ body::after{
 	
         <!-- LOGO 1 -->
 <div class="logo-item">
-    <div class="logo-btn" onclick="showLoginInbound()">
+    <div class="logo-btn" onclick="window.location.href='https://di2tboit81.github.io/POSIND-ESP-INBOUND/'">
         <img src="SPX-INBOUND.png" alt="Logo 1">
     </div>
     <div class="logo-name">INBOUND ESP - POSIND</div>
@@ -820,58 +820,6 @@ document.addEventListener("keydown", function(e){
 
 });
 
-/* ===== LOGIN INBOUND ===== */
-
-function showLoginInbound(){
-    document.getElementById("loginInboundOverlay").style.display = "flex";
-}
-
-function closeLoginInbound(){
-
-    document.getElementById("loginInboundOverlay").style.display = "none";
-
-    document.getElementById("usernameInbound").value = "";
-    document.getElementById("passwordInbound").value = "";
-    document.getElementById("loginInboundError").innerHTML = "";
-
-}
-
-function loginInbound(){
-
-    const user =
-    document.getElementById("usernameInbound").value;
-
-    const pass =
-    document.getElementById("passwordInbound").value;
-
-    // USERNAME & PASSWORD
-    const validUser = "Win29400";
-    const validPass = "29400";
-
-    if(user === validUser && pass === validPass){
-
-        document.getElementById("loginInboundError").style.color = "#00ff99";
-
-        document.getElementById("loginInboundError").innerHTML =
-        "LOGIN BERHASIL...";
-
-        setTimeout(function(){
-
-            window.location.href =
-            "https://di2tboit81.github.io/POSIND-ESP-INBOUND/";
-
-        },800);
-
-    }else{
-
-        document.getElementById("loginInboundError").style.color = "#ff4d4d";
-
-        document.getElementById("loginInboundError").innerHTML =
-        "Username atau Password salah!";
-
-    }
-
-}
 
 </script>
 
@@ -893,29 +841,6 @@ function loginInbound(){
         <div class="close-login" onclick="closeLogin()">✕</div>
 
         <p id="loginError"></p>
-
-    </div>
-
-</div>
-
-<!-- ===== LOGIN INBOUND ===== -->
-<div class="login-overlay" id="loginInboundOverlay">
-
-    <div class="login-box">
-
-        <div class="login-glow"></div>
-
-        <h2>LOGIN INBOUND</h2>
-
-        <input type="text" id="usernameInbound" placeholder="Username">
-
-        <input type="password" id="passwordInbound" placeholder="Password">
-
-        <button onclick="loginInbound()">MASUK</button>
-
-        <div class="close-login" onclick="closeLoginInbound()">✕</div>
-
-        <p id="loginInboundError"></p>
 
     </div>
 
